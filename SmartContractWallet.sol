@@ -85,7 +85,7 @@ contract SmartContractWallet {
             allowance[msg.sender] -= _amount;
         }
 
-        (bool success, bytes memory returnData) = _to.call{value : _amount}(
+        (bool success, bytes memory returnData) = _to.call{value: _amount}(
             payload
         );
         require(success, "Transaction failed, aborting");
